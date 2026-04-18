@@ -1,0 +1,376 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+    box-shadow: -11px -3px 6px 5px;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    background: white;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+.navbar .logo img {
+    width: 250px;
+    height: 80px;
+    object-fit: contain;
+}
+
+
+.nav-items li {
+    list-style: none;
+    font-size:20px ;
+}
+.nav-items li a{
+    color:  rgb(10, 146, 127);
+    text-decoration: none;
+    position: relative;
+
+}
+
+.nav-items li a::before{
+    content: '';
+    position: absolute;
+    background: green;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    right: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-items li a:hover::before{
+ width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* hero-section */
+
+.hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image:url(backround-herosection.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+
+}
+
+.hero-content h1 {
+    font-size: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hero-content h3{
+    font-size: 30px;
+    text-justify: inter-word;
+}
+
+.hero-content h1 span{
+    color: rgb(10, 146, 127);
+}
+
+.search-content {
+    margin-top: 40px;
+}
+
+.search-content input{
+    border: none;
+    border-radius: 16px;
+    background: rgba(165, 164, 164, 0.484);
+    padding: 10px 20px;
+    width: 220px;
+}
+
+.search-content button{
+    background:  rgb(10, 146, 127);
+    color: white;
+    outline: none;
+    border-radius: 16px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+}
+.pharmacie{
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 100px ;
+    gap: 20px;
+    background-image:url(backround-herosection.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+body{
+     background-image:url(backround-herosection.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+ .pharmacie .autre{
+
+width: 200px;
+height: 150px;
+border: 2px solid;
+
+}
+.pharmacie .autre a{
+    color: #008b8b;
+}
+.autre h2{
+    text-align: center;
+}
+
+
+.titre img{
+    width: 1500px;
+    object-fit: contain;
+    height: 400px;
+}
+.titre h1{
+    text-align: center;
+}
+ .antalgiques{
+    text-align: end;
+    color: rgb(10, 146, 127);
+}
+.antiallergique{
+     text-align: end;
+    color: rgb(10, 146, 127);
+
+}
+.psychotropes{
+    text-align: end;
+    color: rgb(10, 146, 127);
+}
+.divers{
+    text-align: center;
+    color: rgb(10, 146, 127);
+}
+.antipaludiques{
+    text-align: end;
+    color: rgb(10, 146, 127);
+}
+.antiviraux{
+    text-align: end;
+    color: rgb(10, 146, 127);
+}
+.dermatologiques{
+    text-align: end;
+    color: rgb(10, 146, 127);
+}
+
+.douga img{
+width: 300px;
+     object-fit: contain;
+     background: white;
+     border-radius: 20px;
+     overflow: hidden;
+     margin: 20px;
+}
+.douga h1{
+    text-align: end;
+    margin-top: -204px;
+    color: #1a365d;
+}
+.douga h2{
+    text-align: end;
+    color: #1a365d;
+}
+.douga h3{
+    text-align: end;
+    color: #1a365d;
+}
+.douga ul  {
+    text-align: end;
+    color: #008b8b;
+    margin-top: -7px;;
+}
+.b {
+    background-color:#f6f4f2;
+}
+.djeneba img{
+width: 300px;
+     object-fit: contain;
+     background: white;
+     border-radius: 20px;
+     overflow: hidden;
+     margin: 20px;
+}
+.djeneba h1{
+    text-align: end;
+    margin-top: -204px;
+    color: #1a365d;
+}
+.djeneba h2{
+    text-align: end;
+    color: #1a365d;
+}
+.djeneba ul {
+    text-align: end;
+    color: #008b8b;}
+    .djeneba h3{
+    text-align: end;
+    color: #1a365d;
+
+}
+.djeneba h3{
+    text-align: end;
+    color: #1a365d;
+}
+.assitan img{
+    width: 300px;
+     object-fit: contain;
+     background: white;
+     border-radius: 20px;
+     overflow: hidden;
+     margin: 20px;
+
+}
+.assitan h1{
+    text-align: end;
+    margin-top: -204px;
+    color: #1a365d;
+}
+.assitan h2 {
+    text-align: end;
+    color: #1a365d;
+}
+.assitan ul {
+    text-align: end;
+    color: #008b8b;}
+.assitan h3{
+    text-align: end;
+    color: #1a365d;
+}
+
+.oumar img{
+    width: 300px;
+     object-fit: contain;
+     background: white;
+     border-radius: 20px;
+     overflow: hidden;
+     margin: 20px;
+     margin-bottom: -35px;
+
+}
+.oumar h1{
+    text-align: end;
+    margin-top: -204px;
+    color: #1a365d;
+}
+.oumar h2{
+    text-align: end;
+    color: #1a365d;
+}
+.oumar ul {
+    text-align: end;
+    color: #008b8b;}
+    .assitan h3{
+    text-align: end;
+    color: #1a365d;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+.oumar h3{
+    text-align: end;
+    color: #1a365d;
+}
+.backround{
+    background-image:url(backround-herosection.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250vh;
+}
+@media-query{
+    .assitan{
+    overflow: ;
+    }
+}
+@media screen and (max-width :768px) {
+    .nav-items a{
+      flex-direction: column;
+      display: flex;
+
+    }
+    .navbar .nav-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+
+
+}
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: ;
+        padding: 20px 20px ;
+    }
+    .navbar .logo img {
+    width: 150px;
+    height: 45px;
+    object-fit: contain;
+    align-items: start;
+}
+
+    .hero-content h1{
+        text-align: center;
+        font-size: 56px;
+    }
+    .hero-content h3{
+        font-size: 28px;
+    }
+    
+
+    .douga img {
+        width: 20%;
+    }
+    .douga ul {
+        font-size: 16px;
+        overflow: scroll;
+    }
+    .douga h1{
+        font-size: 16px;
+        overflow: scroll;
+    }
+    .douga h2 {
+        font-size: 16px;
+        overflow: scroll;
+    }
+    .douga h3 {
+        font-size: 16px;
+        overflow: scroll;
+    }
+    .douga  {
+        font-size: 16px;
+        width: 100%;
+        overflow: scroll;
+    }
+}
