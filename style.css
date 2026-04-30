@@ -1,6 +1,7 @@
 *{
-  margin:0;
-  padding:0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .navbar{
@@ -56,6 +57,260 @@
 
 .menu-toggle {
     display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.menu-toggle.active {
+    display: block;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: rgb(10, 146, 127);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Styles pour les résultats de recherche */
+.results-container {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 10px;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.pharmacie-resultat {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.pharmacie-resultat h3 {
+    color: rgb(10, 146, 127);
+    margin-bottom: 10px;
+}
+
+.pharmacie-resultat h4 {
+    color: rgb(10, 146, 127);
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.pharmacie-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background: rgb(10, 146, 127);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin: 5px;
+}
+
+.pharmacie-link:hover {
+    background: rgb(8, 100, 87);
+}
+
+.localisation-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin: 5px;
+}
+
+.localisation-link:hover {
+    background: #218838;
+}
+
+.no-results {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Mini carte pharmacie dans les résultats */
+.pharmacie-mini {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgb(10, 146, 127), rgb(8, 100, 87));
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pharmacie-nom {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.pharmacie-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-voir, .btn-localisation {
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-voir {
+    background: white;
+    color: rgb(10, 146, 127);
+}
+
+.btn-voir:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.btn-localisation {
+    background: #28a745;
+    color: white;
+}
+
+.btn-localisation:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Résultat inline compact - juste sous la barre de recherche */
+.pharmacie-resultat-inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 100%;
+    border-left: 4px solid rgb(10, 146, 127);
+}
+
+.pharma-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pharma-nom {
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.pharma-separator {
+    color: rgb(10, 146, 127);
+    font-size: 18px;
+}
+
+.pharma-nom-final {
+    color: rgb(10, 146, 127);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.pharmacie-resultat-inline .pharmacie-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.pharmacie-resultat-inline .btn-voir {
+    padding: 6px 14px;
+    font-size: 13px;
+}
+
+.pharmacie-resultat-inline .btn-localisation {
+    padding: 6px 10px;
+    font-size: 13px;
+}
+.dev-photo img{
+    width: 200px;
+}
+
+/* Responsive pour les résultats inline */
+@media screen and (max-width: 768px) {
+    .results-container {
+        padding: 5px;
+        max-height: 250px;
+    }
+    
+    .pharmacie-resultat-inline {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 15px;
+        max-width: 100%;
+    }
+    
+    .pharma-info {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .pharmacie-resultat-inline .pharmacie-actions {
+        justify-content: center;
+        margin-top: 8px;
+    }
+}
+
+/* Responsive pour les mini cartes pharmacie */
+@media screen and (max-width: 768px) {
+    .pharmacie-mini {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    
+    .pharmacie-actions {
+        justify-content: center;
+    }
+    
+    .btn-voir, .btn-localisation {
+        flex: 1;
+        text-align: center;
+    }
 }
 
 /* hero-section */
@@ -136,8 +391,8 @@ body{
 
 width: 200px;
 height: 150px;
-border: 2px solid;
-
+border: 5px solid rgb(19, 139, 139);
+background-color: aliceblue;
 }
 .pharmacie .autre a{
     color: #008b8b;
@@ -155,107 +410,231 @@ border: 2px solid;
 .titre h1{
     text-align: center;
 }
- .antalgiques{
-    text-align: end;
-    color: rgb(10, 146, 127);
+.titre h2{
+    text-align: center;
 }
-.antiallergique{
-     text-align: end;
-    color: rgb(10, 146, 127);
 
+
+/* Grille de produits - 4 par ligne */
+.produits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
-.psychotropes{
-    text-align: end;
+
+.produit-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid rgb(10, 146, 127);
+    transition: transform 0.3s ease;
+}
+
+.produit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.produit-card .nom {
+    font-weight: bold;
+    font-size: 16px;
+    color: #1a365d;
+    margin-bottom: 10px;
+}
+
+.produit-card .prix {
     color: rgb(10, 146, 127);
+    font-size: 18px;
+    font-weight: bold;
 }
-.divers{
+
+/* Catégories de produits */
+.antalgiques, .antibiotique, .antiallergique, .cardiovasculaire, 
+.psychotropes, .respiratoires, .antipaludiques, .antifongiques,
+.antiviraux, .gastro-intestinaux, .dermatologiques, .antdiabetiques, .divers {
+    margin-bottom: 40px;
+}
+
+.antalgiques h2, .antibiotique h2, .antiallergique h2, .cardiovasculaire h2, 
+.psychotropes h2, .respiratoires h2, .antipaludiques h2, .antifongiques h2,
+.antiviraux h2, .gastro-intestinaux h2, .dermatologiques h2, .antdiabetiques h2, .divers h2 {
     text-align: center;
     color: rgb(10, 146, 127);
-}
-.antipaludiques{
-    text-align: end;
-    color: rgb(10, 146, 127);
-}
-.antiviraux{
-    text-align: end;
-    color: rgb(10, 146, 127);
-}
-.dermatologiques{
-    text-align: end;
-    color: rgb(10, 146, 127);
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.douga img{
-width: 300px;
-     object-fit: contain;
-     background: white;
-     border-radius: 20px;
-     overflow: hidden;
-     margin: 20px;
+.antalgiques p, .antibiotique p, .antiallergique p, .cardiovasculaire p, 
+.psychotropes p, .respiratoires p, .antipaludiques p, .antifongiques p,
+.antiviraux p, .gastro-intestinaux p, .dermatologiques p, .antdiabetiques p, .divers p {
+    display: none;
 }
-.douga h1{
-    text-align: end;
-    margin-top: -204px;
+
+/* Styles pour les profils développeurs */
+.dev-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.douga, .djeneba, .assitan, .oumar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 30px;
+    margin: 30px auto;
+    max-width: 400px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Cadre photo attractif - plus grand et visible */
+.dev-photo {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dev-photo img {
+    width: 320px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 0 0 6px rgb(10, 146, 127),
+        0 0 0 12px rgba(10, 146, 127, 0.15),
+        inset 0 0 30px rgba(10, 146, 127, 0.1);
+    transition: all 0.4s ease;
+}
+
+.dev-photo img:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 0 0 6px rgb(10, 146, 127),
+        0 0 0 18px rgba(10, 146, 127, 0.25),
+        inset 0 0 40px rgba(10, 146, 127, 0.15);
+}
+
+/* Contenu texte */
+.dev-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Photo Douga - ronde et au-dessus du texte */
+.douga .dev-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px auto;
+    border: 5px solid rgb(10, 146, 127);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Photo Djeneba - ronde et au-dessus du texte */
+.djeneba .dev-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px auto;
+    border: 5px solid rgb(10, 146, 127);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Photo Assitan - ronde et au-dessus du texte */
+.assitan .dev-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px auto;
+    border: 5px solid rgb(10, 146, 127);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Photo Oumar - ronde et au-dessus du texte */
+.oumar .dev-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px auto;
+    border: 5px solid rgb(10, 146, 127);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dev-content h1 {
     color: #1a365d;
+    font-size: 28px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid rgb(10, 146, 127);
+    padding-bottom: 10px;
+    display: inline-block;
 }
-.douga h2{
-    text-align: end;
+
+.dev-content h2 {
+    color: rgb(10, 146, 127);
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.dev-content h3 {
     color: #1a365d;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 20px;
 }
-.douga h3{
-    text-align: end;
-    color: #1a365d;
+
+.dev-content ul {
+    list-style: none;
+    padding: 0;
 }
-.douga ul  {
-    text-align: end;
+
+.dev-content ul li {
     color: #008b8b;
-    margin-top: -7px;;
+    font-size: 15px;
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
 }
-.b {
-    background-color:#f6f4f2;
-}
-.djeneba img{
-width: 300px;
-     object-fit: contain;
-     background: white;
-     border-radius: 20px;
-     overflow: hidden;
-     margin: 20px;
-}
-.djeneba h1{
-    text-align: end;
-    margin-top: -204px;
-    color: #1a365d;
-}
-.djeneba h2{
-    text-align: end;
-    color: #1a365d;
-}
-.djeneba ul {
-    text-align: end;
-    color: #008b8b;}
-    .djeneba h3{
-    text-align: end;
-    color: #1a365d;
 
+.dev-content ul li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: rgb(10, 146, 127);
+    font-weight: bold;
 }
-.djeneba h3{
-    text-align: end;
-    color: #1a365d;
-}
-.assitan img{
-    width: 300px;
-     object-fit: contain;
-     background: white;
-     border-radius: 20px;
-     overflow: hidden;
-     margin: 20px;
 
-}
-.assitan h1{
-    text-align: end;
-    margin-top: -204px;
-    color: #1a365d;
+/* Ancien styles supprimés - nouveau layout ci-dessus */
+.douga img, .djeneba img, .assitan img, .oumar img {
+    display: none; /* Caché car nouveau système avec .dev-photo */
 }
 .assitan h2 {
     text-align: end;
@@ -308,69 +687,255 @@ width: 300px;
     background-size: cover;
     height: 250vh;
 }
-@media-query{
-    .assitan{
-    overflow: ;
+/* Correction syntaxe media query */
+@media screen and (max-width: 1200px) {
+    .assitan {
+        overflow: visible;
     }
 }
-@media screen and (max-width :768px) {
-    .nav-items a{
-      flex-direction: column;
-      display: flex;
-
-    }
-    .navbar .nav-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-
-
-}
-    .navbar{
-        display: flex;
-        justify-content: space-around;
-        flex-direction: ;
-        padding: 20px 20px ;
-    }
-    .navbar .logo img {
-    width: 150px;
-    height: 45px;
-    object-fit: contain;
-    align-items: start;
-}
-
-    .hero-content h1{
-        text-align: center;
-        font-size: 56px;
-    }
-    .hero-content h3{
-        font-size: 28px;
+/* Responsive - Tablette */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 15px 50px;
     }
     
-
-    .douga img {
-        width: 20%;
+    .navbar .logo img {
+        width: 180px;
+        height: 60px;
     }
-    .douga ul {
-        font-size: 16px;
-        overflow: scroll;
-    }
-    .douga h1{
-        font-size: 16px;
-        overflow: scroll;
-    }
-    .douga h2 {
-        font-size: 16px;
-        overflow: scroll;
-    }
-    .douga h3 {
-        font-size: 16px;
-        overflow: scroll;
-    }
-    .douga  {
-        font-size: 16px;
-        width: 100%;
-        overflow: scroll;
+    
+    .nav-items {
+        gap: 30px;
     }
 }
+
+/* Responsive - Mobile */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+    
+    .navbar .logo img {
+        width: 150px;
+        height: 50px;
+    }
+    
+    .menu-toggle {
+        display: block;
+        z-index: 1000;
+    }
+    
+    .nav-items {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    }
+    
+    .nav-items.active {
+        right: 0;
+    }
+    
+    .nav-items li {
+        font-size: 24px;
+    }
+    
+    .hero-content h1 {
+        font-size: 56px;
+        text-align: center;
+    }
+    
+    .hero-content h3 {
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .search-content {
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .search-content input {
+        width: 100%;
+    }
+    
+    .pharmacie {
+        padding: 20px;
+        flex-direction: column;
+    }
+    
+    .pharmacie .autre {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .douga img {
+        width: 40%;
+    }
+    
+    .djeneba img {
+        width: 40%;
+    }
+    
+    /* Responsive developeur.html */
+    .backround {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .dev-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .douga, .djeneba, .assitan, .oumar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        margin: 20px 0;
+        width: 100%;
+    }
+    
+    .dev-photo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .dev-photo img {
+        width: 200px;
+        height: 250px;
+    }
+    
+    .dev-content {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .dev-content h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .dev-content h2 {
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .dev-content h3 {
+        text-align: center;
+    }
+    
+    .dev-content ul {
+        text-align: left;
+        padding-left: 20px;
+    }
+    
+    .dev-content ul li {
+        font-size: 14px;
+    }
+    
+    .douga h1, .douga h2, .douga h3,
+    .djeneba h1, .djeneba h2, .djeneba h3,
+    .assitan h1, .assitan h2, .assitan h3,
+    .oumar h1, .oumar h2, .oumar h3 {
+        text-align: center;
+    }
+    
+    .douga ul, .djeneba ul, .assitan ul, .oumar ul {
+        text-align: center;
+        padding: 0;
+    }
+    
+    .douga ul li, .djeneba ul li, .assitan ul li, .oumar ul li {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    
+    .dev-photo {
+        width: 100%;
+    }
+    
+    .dev-photo img {
+        width: 150px;
+        height: 200px;
+    }
+    
+    .dev-content {
+        width: 100%;
+    }
+    
+    .dev-content h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .dev-content h2 {
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .dev-content h3 {
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .dev-content ul {
+        padding-left: 15px;
+    }
+    
+    .dev-content ul li {
+        font-size: 12px;
+    }
+}
+
+/* Responsive - Petit mobile */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+    
+    .navbar .logo img {
+        width: 120px;
+        height: 40px;
+    }
+    
+    .nav-items {
+        width: 85%;
+    }
+    
+    .nav-items li {
+        font-size: 18px;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .hero-content h3 {
+        font-size: 16px;
+    }
+    
+    .search-content input {
+        font-size: 14px;
+    }
+    
+    .pharmacie .autre h2 {
+        font-size: 16px;
+    }
+    
+    .douga img, .djeneba img, .assitan img, .oumar img {
+        width: 90%;
+    }
+}
+  
+   
