@@ -1,74 +1,82 @@
-<div class="navbar">
-        <div class="logo"> 
-            <img src="fura logo.png" alt="">
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fura So - Médicaments & Pharmacies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel=" icon" href="/img/" type="x-icon">
+</head>
+<body>
+
+    <!-- Navbar Moderne -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="img/fura logo.png" alt="Fura So">
+                <!-- <span>Fura So</span> -->
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                <li><a href="pages/pharmacies.html" class="nav-link">Pharmacies</a></li>
+                <li><a href="pages/apropos.html" class="nav-link">À propos</a></li>
+                <li><a href="pages/developpeur.html" class="nav-link">Développeur</a></li>
+            </ul>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+    </nav>
 
-        <ul class="nav-items">
-           
-            <li class="items"><a href="index.html">Accueil</a></li>
-            <li class="items"><a href="apropos.html">A Propos</a></li>
-            <li class="items"><a href="developeur.html">DEVELOPEUR</a></li>
-        </ul>
-
-        <div class="menu-toggle">
-            <h1>x</h1>
-        </div>
-
-    </div>
-
-    <!--  hero section -->
-      <div class="hero-section">
+    <!-- Hero -->
+    <section class="hero">
         <div class="hero-content">
-              <h1>Fura <span>So</span></h1>
-         <h3 class="subtitles">I Ka Fura b3 soro yoromi!</h3>
+            <h1>Trouvez vos médicaments facilement</h1>
+            <p>Recherchez parmi des centaines de médicaments disponibles dans les pharmacies près de chez vous</p>
         </div>
+    </section>
 
-        <div class="search-content">
-            <input type="text" placeholder="Qu'est ce  que vous recherchez ?">
-            <button>Envoyer</button>
-        </div >
-    
-             </div>
-             <div class="pharmacie">
-                <div class="autre">
-                    <h2>PHARMACIE FURASO</h2>
-                    <h2><a href="">LOCALISATION</a></h2>
-                    <h2><a href="">VOIR PLUS </a></h2>
-                </div>
-                <div class="autre"> 
-                    <h2>PHARMACIE KENE SANTE </h2>
-                    <h2> <a href="">LOCALISATION</a></h2>
-                    <h2><a href="">VOIR PLUS</a></h2>
-                </div>
-                <div class="autre">
-                     <h2>PHARMACIE BELCO TOURE </h2>
-                    <h2><a href="https://maps.app.goo.gl/GMKS1BDPwA9Yys1S9?g_st=aw">LOCALISATION</a></h2>
-                    <h2><a href="pharmabelcotoure.html">VOIR PLUS </a></h2>
-                </div>
-                <div class="autre">
-                     <h2>PHARMACIE AL FHIRDAOUSS</h2>
-                     <h2><a href="https://maps.app.goo.gl/Rdx47rcWE8ZoFdVa8?g_st=aw">LOCALISATION</a></h2>
-                    <h2><a href="donneepharFHIRDAOUSS.html">VOIR plus</a> </h>
-                </div>
-                <div class="autre">
-                    <h2>PHARMACIE DANAYA</h2>
-                    <h2><a href="">LOCALISATION</a></h2>
-                    <h2><a href="VOIR PLUS "></a></h2>
-                </div>
-                <div class="autre"></div>
-                <div class="autre"></div>
-                <div class="autre"></div>
-                <div class="autre"></div>
-                <div class="autre"></div>
-                <div class="autre"></div>
-                <div class="autre"></div>
-             </div>
-             </div>
-            
+    <!-- Recherche avec Auto-complétion -->
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Rechercher un médicament..." 
+                    class="search-input"
+                    autocomplete="off"
+                >
+                <div class="suggestions" id="suggestions"></div>
+            </div>
+            <select id="categoryFilter" class="category-select">
+                <option value="">Toutes les catégories</option>
+                <option value="Antalgiques">Antalgiques</option>
+                <option value="Antibiotiques">Antibiotiques</option>
+                <option value="Antipaludiques">Antipaludiques</option>
+                <option value="Vitamines">Vitamines</option>
+            </select>
+        </div>
+    </section>
 
+    <!-- Résultats en Cards -->
+    <section class="results-section" id="resultsSection">
+        <div class="results-grid" id="resultsGrid">
+            <!-- Affichage dynamique -->
+        </div>
+    </section>
 
-            
-        
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <footer>
 
+    </footer>
 </body>
 </html>
