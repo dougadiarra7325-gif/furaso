@@ -1,112 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Développeurs - Fura So</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo"> 
-            <img src="fura logo.png" alt="">
-        </div>
 
-        <ul class="nav-items">
-           
-            <li class="items"><a href="index.html">Accueil</a></li>
-            <li class="items"><a href="apropos.html">A Propos</a></li>
-            <li class="items"><a href="developeur.html">DEVELOPEUR</a></li>
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../img/fura logo.png" alt="Fura So">
+                <!-- <span>Fura So</span> -->
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                <li><a href="pharmacies.html" class="nav-link">Pharmacies</a></li>
+                <li><a href="apropos.html" class="nav-link">À propos</a></li>
+                <li><a href="developpeur.html" class="nav-link active">Développeur</a></li>
+            </ul>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-        <div class="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        
-    </div>
+    <!-- Header -->
+    <section class="page-header">
+        <h1><i class="fas fa-code"></i> Notre Équipe</h1>
+        <p>Les développeurs derrière Fura So</p>
+    </section>
 
-    <script src="app.js"></script>
-    <div class="backround">
-    <div class="dev-grid">
-    <!-- Développeur 1 -->
-    <div class="douga">
-        <div class="dev-photo">
-            <img src="douga123.jpeg" alt="DOUGA DIT IBRAHIM DIARRA">
+    <!-- Équipe -->
+    <section class="team-section">
+        <div class="team-grid">
+            
+            <!-- Douga -->
+            <div class="member-card">
+                <div class="member-img">
+                    <img src="../img/douga123.jpeg" alt="Douga dit Ibrahim Diarra">
+                </div>
+                <div class="member-body">
+                    <h2>DOUGA DIT IBRAHIM DIARRA</h2>
+                    <span class="member-role">Ingénieur en Réseaux Télécommunications</span>
+                    
+                    <h3><i class="fas fa-star"></i> Compétences & Expériences</h3>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-project-diagram"></i> Conception et planification des réseaux</li>
+                        <li><i class="fas fa-server"></i> Installation et configuration des équipements (routeurs, switchs, antennes)</li>
+                        <li><i class="fas fa-wifi"></i> Garantie d'une connexion stable et rapide</li>
+                        <li><i class="fas fa-tools"></i> Diagnostic et résolution des pannes</li>
+                        <li><i class="fas fa-rocket"></i> Optimisation des performances réseau</li>
+                        <li><i class="fas fa-shield-alt"></i> Sécurisation des échanges de données</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Djeneba -->
+            <div class="member-card">
+                <div class="member-img">
+                    <img src="../img/djeny123.jpeg" alt="Djeneba Diawara">
+                </div>
+                <div class="member-body">
+                    <h2>DJENEBA DIAWARA</h2>
+                    <span class="member-role">Ingénieur en Réseaux Cybersécurité</span>
+                    
+                    <h3><i class="fas fa-star"></i> Compétences & Expériences</h3>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-network-wired"></i> Conception et installation des infrastructures réseau</li>
+                        <li><i class="fas fa-wifi"></i> Gestion de connexion stable, rapide et fiable</li>
+                        <li><i class="fas fa-search"></i> Analyse des risques et identification des failles</li>
+                        <li><i class="fas fa-lock"></i> Mise en place de solutions de sécurité (pare-feu, antivirus)</li>
+                        <li><i class="fas fa-eye"></i> Surveillance et détection des comportements suspects</li>
+                        <li><i class="fas fa-chart-line"></i> Optimisation des performances et de la sécurité</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Assitan -->
+            <div class="member-card">
+                <div class="member-img">
+                    <img src="../img/aichou123.jpeg" alt="Assitan Sissoko">
+                </div>
+                <div class="member-body">
+                    <h2>ASSITAN SISSOKO</h2>
+                    <span class="member-role">Ingénieur en Réseaux et Télécommunications</span>
+                    
+                    <h3><i class="fas fa-star"></i> Compétences & Expériences</h3>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-server"></i> Installation des équipements réseau</li>
+                        <li><i class="fas fa-sync-alt"></i> Maintenance et vérification continue du réseau</li>
+                        <li><i class="fas fa-bug"></i> Résolution rapide des pannes</li>
+                        <li><i class="fas fa-tachometer-alt"></i> Amélioration des performances réseau</li>
+                        <li><i class="fas fa-shield-alt"></i> Sécurisation des communications</li>
+                        <li><i class="fas fa-project-diagram"></i> Conception de l'architecture réseau</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Oumar -->
+            <div class="member-card">
+                <div class="member-img">
+                    <img src="../img/oumar123.jpeg" alt="Oumar Bah">
+                </div>
+                <div class="member-body">
+                    <h2>OUMAR BAH</h2>
+                    <span class="member-role">Ingénieur en Cybersécurité</span>
+                    
+                    <h3><i class="fas fa-star"></i> Compétences & Expériences</h3>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-search"></i> Analyse des menaces et identification des failles</li>
+                        <li><i class="fas fa-shield-virus"></i> Installation des protections (pare-feu, antivirus)</li>
+                        <li><i class="fas fa-radar"></i> Surveillance des attaques en temps réel</li>
+                        <li><i class="fas fa-user-secret"></i> Tests de sécurité et simulations de piratage</li>
+                        <li><i class="fas fa-fire-extinguisher"></i> Réaction rapide aux incidents de cybersécurité</li>
+                        <li><i class="fas fa-sync-alt"></i> Veille technologique et mise à jour des connaissances</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
-        <div class="dev-content">
-            <h1>DOUGA DIT IBRAHIM DIARRA</h1>
-            <h2>INGENIEUR EN RESEAUX TELECOMMUNICATIONS</h2>
-            <h3>MES COMPETENSES ET EXPERIENSES :</h3>
-            <ul>
-                <li>🗺️ Conçois les réseaux : je planifie l'architecture des systèmes de communication</li> 
-                <li>🛠️ Installe et configure les équipements : routeurs, switchs, antennes, câbles</li>
-                <li>🌐 Gère la communication : je garantis une connexion stable et rapide (internet, téléphonie)</li> 
-                <li>🔍 Diagnostique et résous les pannes : interviens en cas de problème réseau</li> 
-                <li>🚀 Optimise les performances : améliore la vitesse et la qualité du réseau</li>
-                <li>🔒 Sécurise les échanges : je protège les données qui circulent</li>
-            </ul>
-        </div>
-    </div>
-    <!-- Développeur 2 -->
-    <div class="djeneba">
-        <div class="dev-photo">
-            <img src="djeny123.jpeg" alt="DJENEBA DIAWARA">
-        </div>
-        <div class="dev-content">
-            <h1>DJENEBA DIAWARA</h1>
-            <h2>INGENIEUR EN RESEAUX CYBERSECURITE</h2>
-            <h3>MES COMPETENCES ET MES EXPERIENSES</h3>
-            <ul>
-                <li>🛠️ Conçois et installe les réseaux : je mets en place l'infrastructure (routeurs, switchs, serveurs)</li>
-                <li>🌐 Gère le réseau : j'assure une connexion stable, rapide et fiable</li>
-                <li>🔍 Analyse les risques : j'identifie les failles de sécurité dans le système</li>
-                <li>🔒 Mets en place des solutions de sécurité : pare-feu, antivirus, systèmes de détection d'intrusion</li>
-                <li>👁️ Surveille les activités : je détecte les comportements suspects ou les cyberattaques</li>
-                <li>🚀 Optimise les performances : j'améliore la vitesse et la sécurité du réseau</li>
-            </ul>
-        </div>
-    </div>
-    <!-- Développeur 3 -->
-    <div class="assitan">
-        <div class="dev-photo">
-            <img src="aichou123.jpeg" alt="ASSITAN SISSOKO">
-        </div>
-        <div class="dev-content">
-            <h1>ASSITAN SISSOKO</h1>
-            <h2>INGENIEUR EN RESEAUX ET TELECOMMUNICATIONS</h2>
-            <h3>MES COMPETENCES ET MES EXPERIENSES</h3>
-            <ul>
-                <li>🛠️ Installe les équipements : routeurs, switchs, antennes, câbles...</li>
-                <li>🔧 Assure la maintenance : je vérifie que le réseau fonctionne correctement en permanence</li>
-                <li>🔍 Résout les pannes : j'interviens rapidement en cas de problème de connexion ou de communication</li>
-                <li>🚀 Améliore les performances : j'optimise la vitesse et la qualité du réseau</li>
-                <li>🔒 Sécurise les communications : je protège les données qui circulent sur le réseau</li>
-                <li>🗺️ Conçois les réseaux : je planifie l'architecture des réseaux informatiques et télécoms</li>
-            </ul>
-        </div>
-    </div>
-    <!-- Développeur 4 -->
-    <div class="oumar">
-        <div class="dev-photo">
-            <img src="oumar123.jpeg" alt="OUMAR BAH">
-        </div>
-        <div class="dev-content">
-            <h1>OUMAR BAH</h1>
-            <h2>INGENIEUR EN CYBERSECURITE</h2>
-            <h3>MES COMPETENCES ET MES EXPERIENSES</h3>
-            <ul>
-                <li>🔍 Analyse les menaces : j'identifie les risques et les failles de sécurité dans les systèmes</li>
-                <li>🛠️ Mets en place des protections : j'installe des pare-feu, antivirus et systèmes de sécurité</li>
-                <li>👁️ Surveille les attaques : je détecte les intrusions ou comportements suspects en temps réel</li>
-                <li>🔒 Teste la sécurité : je réalise des tests (comme des simulations de piratage) pour vérifier la résistance du système</li>
-                <li>🚨 Réagit aux incidents : j'interviens rapidement en cas de cyberattaque pour limiter les dégâts</li>
-                <li>📚 Met à jour mes connaissances : je reste informé des nouvelles menaces et technologies</li>
-            </ul>
-        </div>
-    </div>
-    </div>
-</div>
+    </section>
+
+    <script>
+        // Menu mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (navToggle) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
